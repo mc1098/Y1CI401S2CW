@@ -1,0 +1,209 @@
+/******************
+    ATM FRAME CSS 
+*******************/
+
+#atm-frame   /*BorderPane*/
+{
+    -fx-background-color: #3495ec;
+    -fx-padding: 10px;
+    -fx-alignment: center;
+}
+#atm-screen /*StackPane*/
+{
+    -fx-background-color: #34495e;
+    /*enforce screen size*/
+    -fx-min-width: 600px;
+    -fx-max-width: 600px;
+    -fx-pref-width: 600px;
+    -fx-min-height: 400px;
+    -fx-min-height: 400px;
+    -fx-min-height: 400px;
+}
+
+/*All elements under atm-screen will have these styles by default*/
+#atm-screen * 
+{
+    -fx-background-color: #34495e;
+    -fx-text-fill:white;
+    -fx-text-alignment: center;
+    -fx-fill:white;
+}
+
+/*Attract ad backgrounds will be black by default*/
+#atm-screen #attract-ad *
+{
+    -fx-background-color: black;
+}
+
+#atm-screen #attract-ad .info * 
+{
+    -fx-font-size: 16px;
+    -fx-font-weight: 900;
+}
+
+#atm-screen #processing-ad *
+{
+    -fx-background-color: white;
+}
+
+#atm-screen #processing-ad .info *
+{
+    -fx-font-size: 16px;
+    -fx-font-weight: 900;
+    -fx-fill:#0066cc;
+}
+
+.atm-menu /*VBox*/
+{
+    -fx-padding: 20px 10px 10px 10px;
+    -fx-spacing: 100px;
+}
+.atm-menu .button
+{
+    -fx-pref-width: 70px;
+    -fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, -fx-body-color, #7f8c8d;
+}
+.atm-menu .button.left 
+{
+    /*Custom shape for button - button will point to the right*/
+    -fx-shape: "M 0 100 L 250 100 L 300 200 L 250 300 L 0 300 Z";
+}
+.atm-menu .button.right 
+{
+     /*Custom shape for button - button will point to the left*/
+    -fx-shape:"M 0 200 L 50 100 L 300 100 L 300 300 L 50 300 Z";
+}
+.atm-menu.button:hover, 
+.atm-menu.button:focused,
+.atm-menu.button:selected, 
+.atm-menu.button:armed
+{
+    -fx-background-radius: 5, 5, 4, 3;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+}
+/*Define gaps between the number pad keys*/
+#atm-numpad 
+{
+    -fx-padding: 10px;
+    -fx-hgap: 10px;
+    -fx-vgap: 10px;
+    -fx-alignment:CENTER;
+}
+/*All number pad keys are the same size*/
+#atm-numpad .button
+{
+    -fx-pref-width: 90px;
+    -fx-font-color: black;
+    -fx-font-weight: bold;
+}
+#atm-numpad #atm-enter
+{
+    -fx-background-color: #00c717;
+}
+#atm-numpad #atm-clear
+{
+    -fx-background-color: #fdef00;
+}
+#atm-numpad #atm-cancel
+{
+    -fx-background-color: red;
+}
+
+
+/*
+    LOGIN PAGE CSS 
+*/
+
+#login-view 
+{
+    -fx-background-color: #34495e;
+    -fx-spacing: 100px;
+}
+
+#login-view .text-area
+{
+    -fx-padding: 20px;
+    -fx-text-fill:white;
+    -fx-font-weight: 800;
+    /*Remove blue focus highlight from TextArea*/
+    -fx-focus-color: transparent; -fx-text-box-border: transparent;
+}
+
+#login-view .text-area *.text 
+{
+    -fx-text-alignment:center;
+}
+
+#login-view .text-area .content
+{
+    -fx-background-color: #34495e;
+}
+
+#login-view .text-field
+{
+    -fx-background-color: #34495e;
+    -fx-pref-width: 50px;
+    -fx-alignment:center;
+    -fx-border-width: 0 0 2px 0;
+    -fx-border-color: white;
+    -fx-padding: 5px;
+    -fx-text-box-border: transparent;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-font-size:16;
+    -fx-text-fill:white;
+    -fx-font-weight:900;
+}
+
+/*
+    CHOICE PAGE CSS 
+*/
+
+.choice-view
+{
+    -fx-padding: 20px 0 0 10px;
+    -fx-vgap: 105px;
+    -fx-hgap: 400px;
+    
+}
+.choice-view * 
+{
+    -fx-font-size: 16;
+    -fx-font-weight: 900;
+    -fx-fill: white;
+}
+
+
+#amount-choice-view .text-field
+{
+    -fx-background-color: #34495e;
+    -fx-pref-width: 50px;
+    -fx-alignment:center;
+    -fx-border-width: 0 0 2px 0;
+    -fx-border-color:white;
+    -fx-padding: 5px;
+    -fx-text-box-border: transparent;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-font-size:16;
+    -fx-text-fill:white;
+    -fx-font-weight:900;
+}
+
+#amount-choice-view .choice-view 
+{
+    -fx-hgap: 500px;
+}
+
+
+/************
+    Result
+*************/
+
+#result-text
+{
+    -fx-font-size: 16px;
+    -fx-text-fill: white;
+    -fx-font-weight: 900;
+    
+}
